@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="JoshLabs">
+  <rect width="512" height="512" rx="112" fill="#121110"/>
+  <g fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="252" font-weight="650" text-anchor="middle">
+    <text x="178" y="350">J</text>
+    <text x="334" y="350" transform="translate(334, 175) scale(-1, 1) translate(-334, -175)">J</text>
+  </g>
+</svg>
