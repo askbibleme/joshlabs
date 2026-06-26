@@ -1,0 +1,4 @@
+.venv-porkbun/
+scripts/
+.git/
+.cursor/

@@ -1,3 +1,5 @@
 .DS_Store
 .cursor/
 *.log
+.venv-porkbun/
+scripts/

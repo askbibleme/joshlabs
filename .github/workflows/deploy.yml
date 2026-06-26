@@ -24,4 +24,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: 652050e08d4a384c7cbe975ea02fb52c
-          command: pages deploy . --project-name=joshlabs --branch main
+          command: pages deploy . --project-name=joshlabs2026 --branch main
