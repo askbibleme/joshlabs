@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JoshMoney — Canadian Bookkeeping App · JoshLabs</title>
+    <meta
+      name="description"
+      content="JoshMoney — offline bookkeeping for Canadian sole proprietors. Expenses, invoices, receipts, mileage, GST/HST and T2125 exports."
+    />
+    <link rel="icon" href="../assets/icons/joshmoney.png" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <header class="topbar" id="topbar">
+      <div class="shell topbar__inner">
+        <a class="brand" href="/">
+          <span class="brand__mark" aria-hidden="true">JL</span>
+          <span class="brand__name">JoshLabs</span>
+        </a>
+        <a class="topbar__contact" href="mailto:josh.zeng.ca@gmail.com">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero--joshmoney shell">
+        <a class="page-hero__back" href="/">← JoshLabs catalog</a>
+        <div class="page-hero__row">
+          <img
+            class="page-hero__icon"
+            src="../assets/icons/joshmoney.png"
+            alt=""
+            width="88"
+            height="88"
+          />
+          <div>
+            <p class="hero__eyebrow">Bookkeeping · 记账 · v1.1.0</p>
+            <h1>JoshMoney</h1>
+            <p class="page-hero__tagline">
+              Offline bookkeeping for Canadian sole proprietors — track income and expenses, scan receipts,
+              create GST/HST invoices, run payroll payslips, and export T2125-friendly reports. JoshMoney does
+              not submit to CRA.
+            </p>
+            <p class="page-hero__tagline">
+              加拿大个体户离线记账：收支、发票、收据扫描、工资单估算与 GST/HST、T2125 导出。不向 CRA 报税。
+            </p>
+            <div class="page-hero__actions">
+              <a class="btn btn--solid" href="/joshmoney/privacy/">Privacy policy</a>
+              <a class="btn btn--outline" href="mailto:josh.zeng.ca@gmail.com">Support</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell" aria-label="JoshMoney features">
+        <div class="section-head">
+          <h2>Features</h2>
+          <p>iOS &amp; Android</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Offline-first</h3>
+            <p>Core bookkeeping works without an account. Data stays on your device by default.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Receipts &amp; expenses</h3>
+            <p>Quick entry, receipt scanning, merchant learning, and ITC support.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Canadian invoices</h3>
+            <p>BN/HST, PDF share, partial payments, and email delivery.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Payroll reference</h3>
+            <p>Bi-weekly, weekly, or monthly payslips with CPP/EI/tax estimates (reference only).</p>
+          </article>
+          <article class="feature-card">
+            <h3>Mileage log</h3>
+            <p>CRA kilometre rates for deductible business travel you enter manually.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Tax exports</h3>
+            <p>T2125 and GST/HST summaries for Wealthsimple Tax or your CPA.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Optional cloud sync</h3>
+            <p>Apple or Google sign-in for optional Supabase sync; receipts can backup to iCloud or Drive.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Team (optional)</h3>
+            <p>Invite teammates by email; shared books with per-person entries when cloud sync is enabled.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="shell principles" aria-label="Disclaimers">
+        <article class="principle">
+          <h3>Not tax advice</h3>
+          <p>Reports and payslip deductions are for reference — confirm with your accountant before remitting or filing.</p>
+        </article>
+        <article class="principle">
+          <h3>No money movement</h3>
+          <p>No payments, bank transfers, loans, or CRA NETFILE submission through the app.</p>
+        </article>
+        <article class="principle">
+          <h3>Privacy</h3>
+          <p>
+            <a href="/joshmoney/privacy/">Privacy policy</a> ·
+            <a href="mailto:josh.zeng.ca@gmail.com">josh.zeng.ca@gmail.com</a>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="shell site-footer">
+      <p><a href="mailto:josh.zeng.ca@gmail.com">josh.zeng.ca@gmail.com</a></p>
+      <p>© <span id="year"></span> Joshua Zeng · <a href="/">JoshLabs</a></p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const topbar = document.getElementById("topbar");
+      const toggleTopbar = () => topbar.classList.toggle("is-scrolled", window.scrollY > 8);
+      toggleTopbar();
+      window.addEventListener("scroll", toggleTopbar, { passive: true });
+    </script>
+  </body>
+</html>
