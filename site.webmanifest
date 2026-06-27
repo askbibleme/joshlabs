@@ -1,0 +1,23 @@
+{
+  "name": "JoshLabs",
+  "short_name": "JoshLabs",
+  "description": "Independent app studio — AskBible.me, JoshMoney, Cabinet X.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f6f3",
+  "theme_color": "#121110",
+  "icons": [
+    {
+      "src": "/assets/icons/joshlabs.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/joshlabs.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,7 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="JoshLabs">
   <rect width="512" height="512" rx="112" fill="#121110"/>
-  <g fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="252" font-weight="650" text-anchor="middle">
-    <text x="178" y="350">J</text>
-    <text x="334" y="350" transform="translate(334, 175) scale(-1, 1) translate(-334, -175)">J</text>
+  <g fill="#ffffff">
+    <g transform="translate(106 111) scale(1.02)">
+      <path d="M132.2,4.1v224.2c0,18.4-3.1,33.4-9.3,45.2c-6.2,11.7-13.8,20.8-23,27.3c-9.2,6.4-18.4,11-27.7,13.7c-9.4,2.7-17.1,4.4-23.3,5c-6.2,0.6-9.2,0.9-9.2,0.9H0v-52.8h39.7c9.9,0,17.6-2,23-5.9c5.4-3.9,9.3-8.5,11.8-13.7c2.4-5.3,3.8-9.9,4.3-13.8c0.4-3.9,0.6-5.9,0.6-5.9V52.3H22.6V4.1H132.2z"/>
+    </g>
+    <g transform="translate(406 111) scale(-1.02 1.02) translate(-132.2 0)">
+      <path d="M132.2,4.1v224.2c0,18.4-3.1,33.4-9.3,45.2c-6.2,11.7-13.8,20.8-23,27.3c-9.2,6.4-18.4,11-27.7,13.7c-9.4,2.7-17.1,4.4-23.3,5c-6.2,0.6-9.2,0.9-9.2,0.9H0v-52.8h39.7c9.9,0,17.6-2,23-5.9c5.4-3.9,9.3-8.5,11.8-13.7c2.4-5.3,3.8-9.9,4.3-13.8c0.4-3.9,0.6-5.9,0.6-5.9V52.3H22.6V4.1H132.2z"/>
+    </g>
   </g>
 </svg>

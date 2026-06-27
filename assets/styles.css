@@ -98,8 +98,17 @@ a {
 
 .brand__name {
   font-size: 0.95rem;
-  font-weight: 650;
+  font-weight: 500;
   letter-spacing: -0.02em;
+}
+
+.wordmark__labs {
+  font-weight: 850;
+  letter-spacing: -0.03em;
+}
+
+.hero h1 .wordmark__labs {
+  font-weight: 900;
 }
 
 .topbar__contact {
@@ -146,7 +155,7 @@ a {
   margin: 0;
   max-width: none;
   font-size: clamp(2.8rem, 7vw, 4.8rem);
-  font-weight: 650;
+  font-weight: 550;
   line-height: 1;
   letter-spacing: -0.04em;
 }
@@ -364,6 +373,16 @@ a {
   font-weight: 650;
   line-height: 1.08;
   letter-spacing: -0.03em;
+}
+
+.app-card__title {
+  color: inherit;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.app-card__title:hover {
+  color: var(--accent, var(--fg));
 }
 
 .app-card__copy {
