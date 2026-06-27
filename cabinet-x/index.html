@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cabinet X — AI Kitchen Design · JoshLabs</title>
+    <meta
+      name="description"
+      content="Cabinet X — upload a kitchen photo, choose cabinet door styles, and preview AI before/after redesigns. For homeowners and kitchen pros."
+    />
+    <meta name="theme-color" content="#121110" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" href="/assets/icons/joshlabs.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/icons/joshlabs.png" type="image/png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="/assets/icons/joshlabs.png" sizes="512x512" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="canonical" href="https://joshlabs.app/cabinet-x/" />
+  </head>
+  <body>
+    <header class="topbar" id="topbar">
+      <div class="shell topbar__inner">
+        <a class="brand" href="/">
+          <span class="brand__mark" aria-hidden="true">JL</span>
+          <span class="brand__name">JoshLabs</span>
+        </a>
+        <a class="topbar__contact" href="mailto:josh.zeng.ca@gmail.com">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero page-hero--cabinet-x shell">
+        <a class="page-hero__back" href="/">← JoshLabs catalog</a>
+        <div class="page-hero__row">
+          <img
+            class="page-hero__icon"
+            src="../assets/icons/cabinet-x.png"
+            alt=""
+            width="88"
+            height="88"
+          />
+          <div>
+            <p class="hero__eyebrow">Kitchen Design · 厨房设计 · v1.0.0</p>
+            <h1>Cabinet X</h1>
+            <p class="page-hero__tagline">
+              Upload a kitchen photo, pick real cabinet door finishes, and preview AI before/after
+              redesigns in seconds. Compare up to six styles, save history, and share with clients.
+            </p>
+            <p class="page-hero__tagline">
+              上传厨房照片，选择真实门型与台面材质，AI 秒级生成改造前后对比图。最多六种方案并排对比，保存历史并分享给客户。
+            </p>
+            <div class="page-hero__actions">
+              <a class="btn btn--solid" href="/cabinet-x/privacy/">Privacy policy</a>
+              <a class="btn btn--outline" href="mailto:josh.zeng.ca@gmail.com">Support</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell" aria-label="Cabinet X features">
+        <div class="section-head">
+          <h2>Features</h2>
+          <p>iOS &amp; Android</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>Photo in, design out</h3>
+            <p>Snap or import a kitchen photo and get an AI redesign with your chosen cabinet style.</p>
+          </article>
+          <article class="feature-card">
+            <h3>13+ door styles</h3>
+            <p>Flat and shaker finishes from the Josh Kitchen catalog, plus optional custom door upload.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Batch compare</h3>
+            <p>Generate up to six finishes in one run and swipe through before/after results.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Before &amp; after</h3>
+            <p>Interactive slider to review the original room against the AI visualization.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Save &amp; share</h3>
+            <p>Export images to Photos, share with clients, and optional company watermark.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Optional cloud sync</h3>
+            <p>Google sign-in syncs design history and preferences across devices (optional).</p>
+          </article>
+          <article class="feature-card">
+            <h3>English &amp; 中文</h3>
+            <p>Switch language in Settings. Built for North American kitchen workflows.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Reference only</h3>
+            <p>AI renders are visual previews — not construction drawings or material orders.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="shell principles" aria-label="Disclaimers">
+        <article class="principle">
+          <h3>Visual reference</h3>
+          <p>Generated images are for design exploration. Confirm materials and layout with your contractor.</p>
+        </article>
+        <article class="principle">
+          <h3>Privacy</h3>
+          <p>
+            <a href="/cabinet-x/privacy/">Privacy policy</a> ·
+            <a href="mailto:josh.zeng.ca@gmail.com">josh.zeng.ca@gmail.com</a>
+          </p>
+        </article>
+        <article class="principle">
+          <h3>JoshLabs</h3>
+          <p>Part of the JoshLabs app family — independent studio by Joshua Zeng, Canada.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="shell site-footer">
+      <p><a href="mailto:josh.zeng.ca@gmail.com">josh.zeng.ca@gmail.com</a></p>
+      <p>© <span id="year"></span> Joshua Zeng · <a href="/">JoshLabs</a></p>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const topbar = document.getElementById("topbar");
+      const toggleTopbar = () => topbar.classList.toggle("is-scrolled", window.scrollY > 8);
+      toggleTopbar();
+      window.addEventListener("scroll", toggleTopbar, { passive: true });
+    </script>
+  </body>
+</html>

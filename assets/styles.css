@@ -550,6 +550,10 @@ a {
   --accent: var(--joshmoney);
 }
 
+.page-hero--cabinet-x {
+  --accent: var(--cabinet);
+}
+
 .page-hero__back {
   display: inline-flex;
   align-items: center;
