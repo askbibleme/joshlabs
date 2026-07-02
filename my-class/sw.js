@@ -1,5 +1,5 @@
 /* App shell version — bumped on deploy to trigger silent auto-update */
-const APP_VERSION = '2026-07-02T17:28:42Z';
+const APP_VERSION = '2026-07-02T23:04:36Z';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(self.skipWaiting());

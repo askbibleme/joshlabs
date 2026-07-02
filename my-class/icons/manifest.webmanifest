@@ -1,7 +1,7 @@
 {
   "id": "/my-class/",
-  "name": "讲道集",
-  "short_name": "讲道集",
+  "name": "My Class",
+  "short_name": "My Class",
   "description": "圣经讲道与主日学音频",
   "start_url": "/my-class/index.html",
   "scope": "/my-class/",

@@ -345,11 +345,11 @@ function normalizeCloudfrontAudioUrl(url) {
   let value = String(url || '').split('#')[0].trim();
   if (!value) return '';
 
+  // 修正个别错误的分辨率变体（403），但不要盲目给普通 .mp4 追加 .h.mp4：
+  // 不同 CGNTV CDN 使用不同格式（寇绍涵用普通 .mp4，唐崇荣用 .h.mp4），
+  // 数据里已存正确可播的地址，强行改写会导致寇绍涵全部 403。
   value = value.replace(/\.h480x288\.h\.mp4$/i, '.h.mp4');
   value = value.replace(/\.h1280x720\.mp4$/i, '.h.mp4');
-  if (/\.cloudfront\.net\/.+\.mp4$/i.test(value) && !/\.h\.mp4$/i.test(value)) {
-    value = value.replace(/\.mp4$/i, '.h.mp4');
-  }
 
   return value;
 }
