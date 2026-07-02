@@ -34,267 +34,53 @@
     </header>
 
     <main>
-      <section class="hero shell">
-        <div class="hero__grid">
-          <div>
-            <p class="hero__eyebrow">Independent App Studio</p>
-            <h1>Josh<span class="wordmark__labs">Labs</span></h1>
-            <p class="hero__lede">
-              JoshLabs 专注实用、克制、尊重隐私的移动应用 — 从经文灵修、个体记账到 AI 厨房设计，每一款产品都围绕真实场景打磨。
-              <br /><br />
-              JoshLabs builds practical mobile apps — privacy-first, workflow-driven, no feature noise.
-            </p>
-          </div>
-
-          <aside class="hero__aside" aria-label="JoshLabs overview">
-            <p class="hero__aside-label">Overview</p>
-            <ul class="hero__stats">
-              <li><span>Published apps</span><strong>2</strong></li>
-              <li><span>In release</span><strong>1</strong></li>
-              <li><span>Web apps</span><strong>1</strong></li>
-            </ul>
-          </aside>
-        </div>
+      <section class="lead shell">
+        <p class="lead__eyebrow">Independent App Studio</p>
+        <h1 class="lead__title">Josh<span class="wordmark__labs">Labs</span></h1>
+        <p class="lead__tagline">Practical mobile apps. Privacy-first.</p>
       </section>
 
-      <section class="shell" aria-labelledby="catalog-title">
-        <div class="section-head">
-          <h2 id="catalog-title">产品目录 · Product Catalog</h2>
-          <p>4 apps · iOS, Android &amp; Web</p>
+      <section class="apps shell" aria-label="Apps by JoshLabs">
+        <div class="apps__grid">
+          <a
+            class="app-tile"
+            data-app="askbible"
+            data-status="live"
+            href="https://askbible.me"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="app-tile__icon">
+              <img src="assets/icons/askbible.png" alt="AskBible.me" width="120" height="120" />
+            </span>
+            <span class="app-tile__name">AskBible.me</span>
+            <span class="app-tile__meta"><span class="app-tile__dot"></span>Scripture</span>
+          </a>
+
+          <a class="app-tile" data-app="joshmoney" data-status="live" href="/joshmoney/">
+            <span class="app-tile__icon">
+              <img src="assets/icons/joshmoney.png" alt="JoshMoney" width="120" height="120" />
+            </span>
+            <span class="app-tile__name">JoshMoney</span>
+            <span class="app-tile__meta"><span class="app-tile__dot"></span>Bookkeeping</span>
+          </a>
+
+          <a class="app-tile" data-app="cabinet-x" data-status="review" href="/cabinet-x/">
+            <span class="app-tile__icon">
+              <img src="assets/icons/cabinet-x.png" alt="Cabinet X" width="120" height="120" />
+            </span>
+            <span class="app-tile__name">Cabinet X</span>
+            <span class="app-tile__meta"><span class="app-tile__dot"></span>Kitchen Design</span>
+          </a>
+
+          <a class="app-tile" data-app="my-class" data-status="live" href="/my-class/">
+            <span class="app-tile__icon">
+              <img src="assets/icons/my-class.png" alt="My Class" width="120" height="120" />
+            </span>
+            <span class="app-tile__name">My Class</span>
+            <span class="app-tile__meta"><span class="app-tile__dot"></span>Bible Study</span>
+          </a>
         </div>
-
-        <div class="catalog">
-          <article class="app-card" data-app="askbible">
-            <div class="app-card__visual">
-              <img
-                class="app-card__icon"
-                src="assets/icons/askbible.png"
-                alt=""
-                width="76"
-                height="76"
-              />
-              <span class="app-card__index">01</span>
-            </div>
-
-            <div class="app-card__main">
-              <div class="app-card__topline">
-                <p class="app-card__category">Scripture · 经文</p>
-                <span class="status status--live">Live</span>
-              </div>
-              <h3>
-                <a
-                  class="app-card__title"
-                  href="https://askbible.me"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >AskBible.me</a
-                >
-              </h3>
-              <div class="app-card__copy">
-                <p>每日经文、自然场景与敬虔音乐，帮助你在忙碌中安静片刻。</p>
-                <p class="is-en">Daily scripture, nature scenes, and worship music for a calm reading rhythm.</p>
-              </div>
-              <ul class="app-card__facts">
-                <li>iOS &amp; Android</li>
-                <li>askbible.me</li>
-                <li>Privacy-first</li>
-              </ul>
-            </div>
-
-            <div class="app-card__actions">
-              <a class="btn btn--solid" href="https://askbible.me" target="_blank" rel="noopener noreferrer">
-                Visit askbible.me
-                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path
-                    d="M4.5 11.5 11.5 4.5M6 4.5h5v5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-              <a
-                class="btn btn--outline"
-                href="https://apps.apple.com/app/id6771996188"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                App Store
-                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path
-                    d="M4.5 11.5 11.5 4.5M6 4.5h5v5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <article class="app-card" data-app="joshmoney">
-            <div class="app-card__visual">
-              <img
-                class="app-card__icon"
-                src="assets/icons/joshmoney.png"
-                alt=""
-                width="76"
-                height="76"
-              />
-              <span class="app-card__index">02</span>
-            </div>
-
-            <div class="app-card__main">
-              <div class="app-card__topline">
-                <p class="app-card__category">Bookkeeping · 记账</p>
-                <span class="status status--live">Live</span>
-              </div>
-              <h3>
-                <a
-                  class="app-card__title"
-                  href="https://apps.apple.com/us/app/joshmoney/id6780067998"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >JoshMoney</a
-                >
-              </h3>
-              <div class="app-card__copy">
-                <p>加拿大个体户离线记账：收支、发票、收据扫描、GST/HST 与 T2125 导出。</p>
-                <p class="is-en">
-                  Offline bookkeeping for Canadian sole proprietors — invoices, receipts, mileage, and tax exports.
-                </p>
-              </div>
-              <ul class="app-card__facts">
-                <li>iOS &amp; Android</li>
-                <li>v1.1.0</li>
-                <li>Offline-first</li>
-              </ul>
-            </div>
-
-            <div class="app-card__actions">
-              <a
-                class="btn btn--solid"
-                href="https://apps.apple.com/us/app/joshmoney/id6780067998"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                App Store
-                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path
-                    d="M4.5 11.5 11.5 4.5M6 4.5h5v5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-              <a class="btn btn--outline" href="/joshmoney/">Product page</a>
-            </div>
-          </article>
-
-          <article class="app-card" data-app="cabinet-x">
-            <div class="app-card__visual">
-              <img
-                class="app-card__icon"
-                src="assets/icons/cabinet-x.png"
-                alt=""
-                width="76"
-                height="76"
-              />
-              <span class="app-card__index">03</span>
-            </div>
-
-            <div class="app-card__main">
-              <div class="app-card__topline">
-                <p class="app-card__category">Kitchen Design · 厨房设计</p>
-                <span class="status status--review">Store review</span>
-              </div>
-              <h3><a class="app-card__title" href="/cabinet-x/">Cabinet X</a></h3>
-              <div class="app-card__copy">
-                <p>上传厨房照片，选择风格与材质，AI 生成改造前后对比图。</p>
-                <p class="is-en">
-                  Upload a kitchen photo, choose a style, and preview an AI before/after redesign.
-                </p>
-              </div>
-              <ul class="app-card__facts">
-                <li>iOS &amp; Android</li>
-                <li>v1.0.0</li>
-                <li>AI visualization</li>
-              </ul>
-            </div>
-
-            <div class="app-card__actions">
-              <a class="btn btn--solid" href="/cabinet-x/">Product page</a>
-              <a class="btn btn--outline" href="/cabinet-x/privacy/">Privacy</a>
-            </div>
-          </article>
-
-          <article class="app-card" data-app="my-class">
-            <div class="app-card__visual">
-              <img
-                class="app-card__icon"
-                src="assets/icons/my-class.png"
-                alt=""
-                width="76"
-                height="76"
-              />
-              <span class="app-card__index">04</span>
-            </div>
-
-            <div class="app-card__main">
-              <div class="app-card__topline">
-                <p class="app-card__category">Bible Study · 圣经学习</p>
-                <span class="status status--live">Live</span>
-              </div>
-              <h3><a class="app-card__title" href="/my-class/">My Class</a></h3>
-              <div class="app-card__copy">
-                <p>讲道集——圣经讲道与主日学音频，按书卷分类，支持离线播放。</p>
-                <p class="is-en">
-                  Sermons and Sunday school audio — browse by book, stream or listen offline.
-                </p>
-              </div>
-              <ul class="app-card__facts">
-                <li>Web App</li>
-                <li>joshlabs.app/my-class</li>
-                <li>Add to Home Screen</li>
-              </ul>
-              <div class="install-hint" id="my-class-install-hint">
-                <p class="install-hint__title">📲 添加到主屏幕 · Add to Home Screen</p>
-                <ol class="install-hint__steps install-hint__steps--ios">
-                  <li>Safari 底部点 <strong>分享</strong></li>
-                  <li>选 <strong>添加到主屏幕</strong></li>
-                  <li>点 <strong>添加</strong></li>
-                </ol>
-                <p class="install-hint__steps install-hint__steps--android">
-                  打开应用后，浏览器会提示安装；或点菜单 → <strong>添加到主屏幕</strong>。
-                </p>
-              </div>
-            </div>
-
-            <div class="app-card__actions">
-              <a class="btn btn--solid" href="/my-class/">Open My Class</a>
-              <a class="btn btn--outline" href="/my-class/" id="my-class-install-link">Add to Home Screen</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="shell principles" aria-label="JoshLabs principles">
-        <article class="principle">
-          <h3>Privacy by design</h3>
-          <p>No ad tracking. Data stays on-device unless you explicitly choose cloud backup.</p>
-        </article>
-        <article class="principle">
-          <h3>Built for real work</h3>
-          <p>Each app solves one workflow well — scripture, bookkeeping, or kitchen visualization.</p>
-        </article>
-        <article class="principle">
-          <h3>Independent studio</h3>
-          <p>Josh<span class="wordmark__labs">Labs</span> by Joshua Zeng — designed and maintained in Canada.</p>
-        </article>
       </section>
     </main>
 
@@ -312,20 +98,6 @@
       };
       toggleTopbar();
       window.addEventListener("scroll", toggleTopbar, { passive: true });
-
-      const ua = navigator.userAgent;
-      const isIOS =
-        /iPad|iPhone|iPod/.test(ua) ||
-        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-      const isAndroid = /Android/.test(ua);
-      const hint = document.getElementById("my-class-install-hint");
-      if (hint) {
-        hint.querySelector(".install-hint__steps--ios")?.classList.toggle("is-visible", isIOS);
-        hint.querySelector(".install-hint__steps--android")?.classList.toggle("is-visible", isAndroid);
-        if (!isIOS && !isAndroid) {
-          hint.querySelector(".install-hint__steps--ios")?.classList.add("is-visible");
-        }
-      }
     </script>
   </body>
 </html>
