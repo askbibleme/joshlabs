@@ -9,7 +9,7 @@ export function getAppBasePath() {
   }
 
   const path = window.location.pathname;
-  if (path === '/my-class' || path.startsWith('/my-class/')) return '/my-class';
+  if (path === '/myclass' || path.startsWith('/myclass/')) return '/myclass';
   return '';
 }
 
