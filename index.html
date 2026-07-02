@@ -6,12 +6,12 @@
     <title>JoshLabs — Independent App Studio</title>
     <meta
       name="description"
-      content="JoshLabs — 独立移动应用品牌。AskBible.me、JoshMoney、Cabinet X。"
+      content="JoshLabs — 独立移动应用品牌。AskBible.me、JoshMoney、Cabinet X、My Class。"
     />
     <meta property="og:title" content="JoshLabs — Independent App Studio" />
     <meta
       property="og:description"
-      content="Practical mobile apps with privacy-first design. AskBible.me, JoshMoney, and Cabinet X."
+      content="Practical mobile apps with privacy-first design. AskBible.me, JoshMoney, Cabinet X, and My Class."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://joshlabs.app/assets/icons/joshlabs.png" />
@@ -49,9 +49,9 @@
           <aside class="hero__aside" aria-label="JoshLabs overview">
             <p class="hero__aside-label">Overview</p>
             <ul class="hero__stats">
-              <li><span>Published apps</span><strong>1</strong></li>
+              <li><span>Published apps</span><strong>2</strong></li>
               <li><span>In release</span><strong>1</strong></li>
-              <li><span>In development</span><strong>1</strong></li>
+              <li><span>Web apps</span><strong>1</strong></li>
             </ul>
           </aside>
         </div>
@@ -60,7 +60,7 @@
       <section class="shell" aria-labelledby="catalog-title">
         <div class="section-head">
           <h2 id="catalog-title">产品目录 · Product Catalog</h2>
-          <p>3 apps · iOS &amp; Android</p>
+          <p>4 apps · iOS, Android &amp; Web</p>
         </div>
 
         <div class="catalog">
@@ -207,6 +207,54 @@
               <a class="btn btn--outline" href="/cabinet-x/privacy/">Privacy</a>
             </div>
           </article>
+
+          <article class="app-card" data-app="my-class">
+            <div class="app-card__visual">
+              <img
+                class="app-card__icon"
+                src="assets/icons/my-class.png"
+                alt=""
+                width="76"
+                height="76"
+              />
+              <span class="app-card__index">04</span>
+            </div>
+
+            <div class="app-card__main">
+              <div class="app-card__topline">
+                <p class="app-card__category">Bible Study · 圣经学习</p>
+                <span class="status status--live">Live</span>
+              </div>
+              <h3><a class="app-card__title" href="/my-class/">My Class</a></h3>
+              <div class="app-card__copy">
+                <p>高路、寇绍涵、唐崇荣等讲道与主日学音频，按书卷分类，支持离线播放。</p>
+                <p class="is-en">
+                  Sermons and Sunday school audio — browse by book, stream or listen offline.
+                </p>
+              </div>
+              <ul class="app-card__facts">
+                <li>Web App</li>
+                <li>joshlabs.app/my-class</li>
+                <li>Add to Home Screen</li>
+              </ul>
+              <div class="install-hint" id="my-class-install-hint">
+                <p class="install-hint__title">📲 添加到主屏幕 · Add to Home Screen</p>
+                <ol class="install-hint__steps install-hint__steps--ios">
+                  <li>Safari 底部点 <strong>分享</strong></li>
+                  <li>选 <strong>添加到主屏幕</strong></li>
+                  <li>点 <strong>添加</strong></li>
+                </ol>
+                <p class="install-hint__steps install-hint__steps--android">
+                  打开应用后，浏览器会提示安装；或点菜单 → <strong>添加到主屏幕</strong>。
+                </p>
+              </div>
+            </div>
+
+            <div class="app-card__actions">
+              <a class="btn btn--solid" href="/my-class/">Open My Class</a>
+              <a class="btn btn--outline" href="/my-class/" id="my-class-install-link">Add to Home Screen</a>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -240,6 +288,20 @@
       };
       toggleTopbar();
       window.addEventListener("scroll", toggleTopbar, { passive: true });
+
+      const ua = navigator.userAgent;
+      const isIOS =
+        /iPad|iPhone|iPod/.test(ua) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      const isAndroid = /Android/.test(ua);
+      const hint = document.getElementById("my-class-install-hint");
+      if (hint) {
+        hint.querySelector(".install-hint__steps--ios")?.classList.toggle("is-visible", isIOS);
+        hint.querySelector(".install-hint__steps--android")?.classList.toggle("is-visible", isAndroid);
+        if (!isIOS && !isAndroid) {
+          hint.querySelector(".install-hint__steps--ios")?.classList.add("is-visible");
+        }
+      }
     </script>
   </body>
 </html>

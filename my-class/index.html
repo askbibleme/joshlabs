@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#FFB100" />
+    <script>
+      (function () {
+        var key = 'sermon-theme-v1';
+        var stored = localStorage.getItem(key);
+        var dark =
+          stored === 'dark' ||
+          (stored !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        document.documentElement.dataset.themeMode = stored === 'light' || stored === 'dark' ? stored : 'system';
+      })();
+    </script>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="My Class" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="app-base" content="/my-class" />
+    <title>My Class</title>
+    <link rel="manifest" href="/my-class/icons/manifest.webmanifest" />
+    <link rel="icon" href="/my-class/icons/icon-192.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/my-class/icons/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/my-class/styles.css" />
+    <script type="module" src="/my-class/theme.js"></script>
+  </head>
+  <body>
+    <div id="install-guide" class="install-banner" hidden aria-hidden="true" role="region" aria-labelledby="install-guide-title">
+      <div class="install-banner-icon" aria-hidden="true">
+        <img src="/my-class/icons/icon-192.png" width="40" height="40" alt="" />
+      </div>
+      <div class="install-banner-copy">
+        <strong id="install-guide-title" class="install-banner-title">添加到主屏幕</strong>
+        <p id="install-guide-lead" class="install-banner-lead"></p>
+        <ol id="install-guide-steps" class="install-banner-steps" hidden></ol>
+      </div>
+      <div class="install-banner-actions">
+        <button id="install-guide-primary" class="install-banner-button" type="button" hidden>添加</button>
+        <button id="install-guide-dismiss" class="install-banner-close" type="button" aria-label="关闭">×</button>
+      </div>
+    </div>
+
+    <main class="page app-shell">
+      <section class="app-card" aria-label="My Class">
+        <div class="page-scroll">
+          <div class="catalog-nav" id="catalog-nav">
+            <div class="catalog-nav-speakers">
+              <div class="speaker-tabs" role="tablist" aria-label="讲员">
+                <button
+                  id="tab-speaker-gaolu"
+                  class="speaker-tab"
+                  type="button"
+                  role="tab"
+                  data-speaker="gaolu"
+                  aria-controls="category-book-list"
+                >
+                  高路
+                </button>
+                <button
+                  id="tab-speaker-kou"
+                  class="speaker-tab"
+                  type="button"
+                  role="tab"
+                  data-speaker="kou"
+                  aria-controls="category-book-list"
+                >
+                  寇绍涵
+                </button>
+                <button
+                  id="tab-speaker-tang"
+                  class="speaker-tab"
+                  type="button"
+                  role="tab"
+                  data-speaker="tang"
+                  aria-controls="category-book-list"
+                >
+                  唐崇荣
+                </button>
+                <button
+                  id="tab-speaker-jiuren"
+                  class="speaker-tab"
+                  type="button"
+                  role="tab"
+                  data-speaker="jiuren"
+                  aria-controls="category-book-list"
+                >
+                  李洁人
+                </button>
+              </div>
+            </div>
+            <div class="catalog-nav-categories">
+              <span class="catalog-nav-label" aria-hidden="true">分类</span>
+              <div class="category-tabs" id="category-tabs" role="tablist" aria-label="分类">
+                <button
+                  id="tab-sunday"
+                  class="category-tab"
+                  type="button"
+                  role="tab"
+                  data-category="主日"
+                  data-speakers="gaolu"
+                  aria-controls="category-book-list"
+                >
+                  主日
+                </button>
+                <button
+                  id="tab-new"
+                  class="category-tab"
+                  type="button"
+                  role="tab"
+                  data-category="新约"
+                  aria-controls="category-book-list"
+                >
+                  新约
+                </button>
+                <button
+                  id="tab-old"
+                  class="category-tab"
+                  type="button"
+                  role="tab"
+                  data-category="旧约"
+                  aria-controls="category-book-list"
+                >
+                  旧约
+                </button>
+                <button
+                  id="tab-other"
+                  class="category-tab"
+                  type="button"
+                  role="tab"
+                  data-category="系列"
+                  aria-controls="category-book-list"
+                >
+                  系列
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-search" role="search" aria-label="搜索讲道">
+            <label class="catalog-search-field">
+              <svg class="catalog-search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zm8.9 2.1-3.8-3.8"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <input
+                id="catalog-search-input"
+                class="catalog-search-input"
+                type="search"
+                enterkeyhint="search"
+                placeholder="搜索讲道、系列、讲员"
+                autocomplete="off"
+                autocorrect="off"
+                spellcheck="false"
+              />
+              <button
+                id="catalog-search-clear"
+                class="catalog-search-clear"
+                type="button"
+                hidden
+                aria-label="清除搜索"
+              >
+                ×
+              </button>
+            </label>
+          </div>
+          <div id="sunday-filter-panel" class="sunday-filter-panel" hidden aria-label="主日筛选"></div>
+          <div id="category-book-list" class="category-book-list" role="tabpanel" aria-label="书卷列表"></div>
+        </div>
+
+        <section class="hero-card player-section" aria-label="正在播放">
+          <div class="hero-copy">
+            <div class="hero-line">
+              <button
+                id="speed-button"
+                class="icon-action-button speed-button"
+                type="button"
+                aria-label="调整播放速度"
+                title="播放速度"
+              >
+                1x
+              </button>
+              <div class="hero-line-actions">
+                <button
+                  id="theme-toggle"
+                  class="icon-action-button theme-toggle"
+                  type="button"
+                  aria-label="切换到深色模式"
+                  title="切换外观"
+                >
+                  <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path
+                      d="M20 14.5A7.5 7.5 0 0 1 9.5 4 6 6 0 1 0 20 14.5z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button
+                  id="share-button"
+                  class="icon-action-button"
+                  type="button"
+                aria-label="分享讲道"
+                title="分享讲道"
+                >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M13.5 4.5l6 6-6 6M19.5 10.5H9a3 3 0 0 0-3 3v1.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              </div>
+            </div>
+            <h2 id="track-title">未选择讲道</h2>
+            <div class="track-panel" aria-label="当前系列">
+              <div id="selected-book-tracks" class="track-pills" aria-label="章节列表"></div>
+            </div>
+            <div class="track-meta">
+              <span id="track-book">等待播放</span>
+              <span id="track-date">--</span>
+            </div>
+          </div>
+
+          <div class="hero-progress">
+            <div class="time-row">
+              <span id="time-current">0:00</span>
+              <span id="time-total">0:00</span>
+            </div>
+            <input
+              id="progress-slider"
+              class="progress-slider"
+              type="range"
+              min="0"
+              max="1000"
+              value="0"
+              aria-label="播放进度"
+            />
+          </div>
+
+          <div class="control-row" aria-label="播放控制">
+            <button id="skip-back-button" class="control-button subtle" type="button" aria-label="后退十五秒">
+              ↺15
+            </button>
+            <button id="prev-button" class="control-button" type="button" aria-label="上一篇">
+              ❮
+            </button>
+            <button id="play-toggle" class="play-toggle" type="button" aria-label="播放或暂停">
+              <svg class="play-toggle-icon play-toggle-icon--play" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M8 5.5v13l11-6.5L8 5.5z" fill="currentColor" />
+              </svg>
+              <svg class="play-toggle-icon play-toggle-icon--pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M7.5 6h3v12h-3V6zm6 0h3v12h-3V6z" fill="currentColor" />
+              </svg>
+            </button>
+            <button id="next-button" class="control-button" type="button" aria-label="下一篇">
+              ❯
+            </button>
+            <button id="skip-forward-button" class="control-button subtle" type="button" aria-label="前进十五秒">
+              15↻
+            </button>
+          </div>
+
+        </section>
+      </section>
+    </main>
+
+    <audio id="audio" class="hidden-audio" preload="metadata" playsinline></audio>
+
+    <div id="share-sheet" class="share-sheet" hidden aria-hidden="true">
+      <button class="share-sheet-backdrop" type="button" data-action="close-share" aria-label="关闭"></button>
+      <section class="share-sheet-panel" role="dialog" aria-labelledby="share-sheet-heading" aria-modal="true">
+        <h2 id="share-sheet-heading" class="share-sheet-heading">分享讲道</h2>
+        <p id="share-sheet-title" class="share-sheet-title"></p>
+        <p id="share-sheet-lead" class="share-sheet-lead"></p>
+        <div class="share-sheet-actions">
+          <button class="share-sheet-button primary" type="button" data-action="share-mp3">
+            分享 MP3 文件
+          </button>
+          <button class="share-sheet-button" type="button" data-action="download-mp3">
+            下载 MP3
+          </button>
+          <button class="share-sheet-button" type="button" data-action="copy-mp3-link">
+            复制 MP3 链接
+          </button>
+          <button class="share-sheet-button ghost" type="button" data-action="copy-page-link">
+            复制播放页链接
+          </button>
+        </div>
+        <p id="share-sheet-status" class="share-sheet-status" aria-live="polite"></p>
+      </section>
+    </div>
+
+    <script type="module" src="/my-class/install.js"></script>
+    <script type="module" src="/my-class/app.js"></script>
+  </body>
+</html>

@@ -16,6 +16,7 @@
   --askbible: #d49200;
   --joshmoney: #0a6e5a;
   --cabinet: #2a2a2a;
+  --my-class: #ffb100;
   --live: #16794a;
   --review: #9a6700;
   --soon: #6b6762;
@@ -288,6 +289,10 @@ a {
   --accent: var(--cabinet);
 }
 
+.app-card[data-app="my-class"] {
+  --accent: var(--my-class);
+}
+
 .app-card__visual {
   display: grid;
   gap: 0.75rem;
@@ -420,6 +425,42 @@ a {
   font-size: 0.74rem;
   font-weight: 550;
   color: var(--fg-soft);
+}
+
+.install-hint {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px dashed rgba(255, 177, 0, 0.35);
+  border-radius: var(--radius-md);
+  background: rgba(255, 177, 0, 0.06);
+}
+
+.install-hint__title {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 650;
+  color: var(--fg-soft);
+}
+
+.install-hint__steps {
+  display: none;
+  margin: 0;
+  padding-left: 1.15rem;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.install-hint__steps.is-visible {
+  display: block;
+}
+
+.install-hint__steps--ios {
+  list-style: decimal;
+}
+
+.install-hint__steps li {
+  margin: 0.2rem 0;
 }
 
 .app-card__actions {
