@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-10T01:32:25.734Z",
+  "generatedAt": "2026-07-02T04:13:59.719Z",
   "source": "https://ochopechurch.org",
   "counts": {
     "books": 41,
-    "lessons": 854,
+    "lessons": 855,
     "downloadedAudio": 0,
     "categories": 3
   },
@@ -13,15 +13,27 @@
       "slug": "/主日/2026/",
       "url": "https://ochopechurch.org/%E5%B4%87%E6%8B%9C%E4%BF%A1%E6%81%AF/2025%E8%AF%81%E9%81%93%E4%BF%A1%E6%81%AF-2/",
       "category": "主日",
-      "lessonCount": 10,
-      "latestDate": "2026-06-07",
+      "lessonCount": 11,
+      "latestDate": "2026-06-28",
       "latestTeacher": "高路 牧師",
-      "latestLesson": "生命见证与时刻警醒 歌罗西书4:12-18节",
+      "latestLesson": "具备蒙神拣选的明证 帖前1:6-10节",
       "hasGaoLuAudio": true,
-      "gaoLuLessonCount": 10,
+      "gaoLuLessonCount": 11,
       "downloadedAudioCount": 0,
       "earliestDate": "2026-01-04",
       "lessons": [
+        {
+          "lesson": "具备蒙神拣选的明证 帖前1:6-10节",
+          "date": "2026-06-28",
+          "teacher": "高路 牧師",
+          "fileUrl": "https://ochopechurch.org/wp-content/uploads/2026/06/20260628_Sunday_Bulletin.pdf",
+          "audioUrl": "https://ochopechurch.org/wp-content/uploads/2026/06/20260628_具备蒙神拣选的明证.mp3",
+          "videoUrl": "https://youtu.be/yEPhBcRMs6U",
+          "isGaoLu": true,
+          "pdfFileName": "20260628_Sunday_Bulletin.pdf",
+          "audioFileName": "20260628_具备蒙神拣选的明证.mp3",
+          "displayLabel": "具备蒙神拣选的明证 帖前1:6-10节"
+        },
         {
           "lesson": "生命见证与时刻警醒 歌罗西书4:12-18节",
           "date": "2026-06-07",

@@ -313,7 +313,7 @@ function formatDate(value) {
 }
 
 function buildArtDataUrl(title, subtitle, accent = '#FFB100') {
-  const safeTitle = escapeHtml(title || 'My Class');
+  const safeTitle = escapeHtml(title || '讲道集');
   const safeSubtitle = escapeHtml(subtitle || 'Sunday');
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" fill="none">
@@ -341,8 +341,21 @@ function primaryBookTitle(title) {
     .find(Boolean) || '';
 }
 
+function normalizeCloudfrontAudioUrl(url) {
+  let value = String(url || '').split('#')[0].trim();
+  if (!value) return '';
+
+  value = value.replace(/\.h480x288\.h\.mp4$/i, '.h.mp4');
+  value = value.replace(/\.h1280x720\.mp4$/i, '.h.mp4');
+  if (/\.cloudfront\.net\/.+\.mp4$/i.test(value) && !/\.h\.mp4$/i.test(value)) {
+    value = value.replace(/\.mp4$/i, '.h.mp4');
+  }
+
+  return value;
+}
+
 function cleanRemoteAudioUrl(url) {
-  return String(url || '').split('#')[0].trim();
+  return normalizeCloudfrontAudioUrl(url);
 }
 
 function resolveAudioSrc(lesson) {
@@ -2145,10 +2158,14 @@ function bindControls() {
       if (book) {
         setSelectedBookTitle(book.title);
         setCategorySelection(category, book.title, speaker);
+        selectBook(book.title, { autoplay: false });
       } else {
+        state.currentTrack = null;
+        $audio.removeAttribute('src');
+        $audio.load();
         setSelectedBookTitle('');
+        renderAll();
       }
-      renderAll();
       scheduleSaveSession();
     });
   });

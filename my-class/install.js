@@ -98,9 +98,9 @@ function syncInstallGuide() {
 
   if ($lead) {
     if (platform === 'ios') {
-      $lead.textContent = '像 App 一样从桌面打开 My Class，随时收听';
+      $lead.textContent = '像 App 一样从桌面打开讲道集，随时收听';
     } else {
-      $lead.textContent = '安装后可从桌面快速打开 My Class';
+      $lead.textContent = '安装后可从桌面快速打开讲道集';
     }
   }
 
