@@ -26,10 +26,10 @@ const SHARE_QUERY_KEY = 'p';
 const CATEGORY_ORDER = ['主日', '新约', '旧约', '系列'];
 const DEFAULT_CATEGORY = '新约';
 const SPEAKERS = [
-  { id: 'gaolu', label: '高路' },
   { id: 'kou', label: '寇绍涵' },
   { id: 'tang', label: '唐崇荣' },
   { id: 'jiuren', label: '李洁人' },
+  { id: 'gaolu', label: '高路' },
 ];
 const DEFAULT_SPEAKER = 'gaolu';
 const SPEEDS = [1, 1.25, 1.5, 1.75, 2];
